@@ -53,7 +53,7 @@ function readProducts(products) {
   document.querySelector("#products").innerHTML = "";
   products.forEach((product, position) => {
     document.querySelector("#products").innerHTML += `
-      <div class="card">
+      <div class="card mb-3">
         <img src="${product.img}" class="card-img-top" alt="${product.Title}">
         <div class="card-body">
           <h5 class="card-title">${product.Title}</h5>
@@ -225,16 +225,25 @@ function addToCart(position) {
 }
 
 // SORT BY GENRE
-function sortGenre() {
-
-}
+function sortGenre() {}
 
 // SORT BY NAME
 function sortName() {
+  let direction = document.querySelector("#sortName").value;
 
+  let sortedProducts = products.sort((a, b) => {
+    if (a.Title.toLowerCase() < b.Title.toLowerCase()) {
+      return -1;
+    }
+    if (a.Title.toLowerCase() > b.Title.toLowerCase()) {
+      return 1;
+    }
+    return 0;
+  });
+  if (direction == "descending") sortedProducts.reverse();
+  console.log(sortedProducts);
+  readProducts(products);
 }
 
 // SORT BY PRICE
-function sortPrice() {
-  
-}
+function sortPrice() {}

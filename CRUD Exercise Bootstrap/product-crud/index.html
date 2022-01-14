@@ -145,46 +145,47 @@
         </div>
       </div>
     </nav>
+    <div class="container d-flex mt-3 mb-3">
+      <label for="" class="form-label text-white start">Sort Genre</label>
+      <select
+        class="form-select"
+        style="width: 10rem"
+        name=""
+        id="sortGenre"
+        onchange="sortGenre()"
+      >
+        <option value="All">All</option>
+        <option value="Fantasy Fiction">Fantasy Fiction</option>
+        <option value="Thriller">Thriller</option>
+        <option value="Comedy">Comedy</option>
+      </select>
 
-    <label for="" class="form-label text-white">Sort Genre</label>
-    <select
-      class="form-select"
-      style="width: 10rem"
-      name=""
-      id="sortGenre"
-      onchange="sortGenre()"
-    >
-      <option value="All">All</option>
-      <option value="Fantasy Fiction">Fantasy Fiction</option>
-      <option value="Thriller">Thriller</option>
-      <option value="Comedy">Comedy</option>
-    </select>
+      <label for="" class="form-label text-white center">Sort name</label>
+      <select
+        class="form-select"
+        style="width: 10rem"
+        name=""
+        id="sortName"
+        onchange="sortName()"
+      >
+        <option value=""></option>
+        <option value="ascending">Ascending</option>
+        <option value="descending">Descending</option>
+      </select>
 
-    <label for="" class="form-label text-white">Sort name</label>
-    <select
-      class="form-select"
-      style="width: 10rem"
-      name=""
-      id="sortName"
-      onchange="sortName()"
-    >
-      <option value=""></option>
-      <option value="ascending">Ascending</option>
-      <option value="descending">Descending</option>
-    </select>
-
-    <label for="" class="form-label text-white">Sort Price</label>
-    <select
-      class="form-select"
-      style="width: 10rem"
-      name=""
-      id="sortPrice"
-      onchange="sortPrice()"
-    >
-      <option value=""></option>
-      <option value="ascending">Ascending</option>
-      <option value="descending">Descending</option>
-    </select>
+      <label for="" class="form-label text-white">Sort Price</label>
+      <select
+        class="form-select px-5"
+        style="width: 10rem"
+        name=""
+        id="sortPrice"
+        onchange="sortPrice()"
+      >
+        <option value=""></option>
+        <option value="ascending">Ascending</option>
+        <option value="descending">Descending</option>
+      </select>
+    </div>
     <div id="products" class="container d-flex"></div>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
